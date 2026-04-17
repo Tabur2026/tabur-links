@@ -32,7 +32,7 @@ export default function Header() {
         </div>
   
         {/* Tagline */}
-        <div style={{ marginTop: 10, color: "rgba(196,101,72,0.85)", fontSize: 18 }}>تكا وكافتيريا</div>
+        <div style={{ marginTop: 10, color: "rgba(196,101,72,0.85)", fontSize: 18 }}>كافتيريا لكل الأوقات</div>
   
         {/* Social icons */}
         <div style={{ marginTop: 18, display: "flex", gap: 14, justifyContent: "center" }}>

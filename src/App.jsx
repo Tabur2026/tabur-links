@@ -51,7 +51,7 @@ export default function App() {
                <img src="/logo.png" alt="طابور" width="160px" height="125px" />
 
           <h1 className="brand">طــابـور</h1>
-          <h6 className="subbrand">كافتيـــريا  جميـــع الأوقــات </h6>
+          <h6 className="subbrand">كافتيـــريا  لكل الأوقــات </h6>
           <p className="country">المملكة العربية السعودية</p>
 
           <div className="socials">

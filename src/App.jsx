@@ -47,7 +47,7 @@ export default function App() {
     {
       title: "من نحن",
       subtitle: "تعرّف على طابور",
-      icon: "/icons/tabur_logo_white.png",
+      icon: "/icons/tabur name.png",
       size: 40,
       url: "https://drive.google.com/file/d/12sSAwbKNY_GItSNH0O_bZUdhBHDSpQEW/view",
     },

@@ -73,7 +73,7 @@ export default function App() {
 
 {/* TikTok */}
 <a href="#" className="social-link">
-  <svg viewBox="0 0 24 24" width="22" height="22" fill="#c9835d">
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="#72A294">
     <path d="M19 8.3a6.5 6.5 0 0 1-3.8-1.2V14a5 5 0 1 1-5-5h.3v2.7h-.3a2.3 2.3 0 1 0 2.3 2.3V2h2.7a3.8 3.8 0 0 0 3.8 3.8v2.5z"/>
   </svg>
 </a>
@@ -85,7 +85,7 @@ export default function App() {
       stroke="#c9835d" strokeWidth="2"/>
     <circle cx="12" cy="12" r="4"
       stroke="#c9835d" strokeWidth="2"/>
-    <circle cx="17" cy="7" r="1.5" fill="#c9835d"/>
+    <circle cx="17" cy="7" r="1.5" fill="#72A294"/>
   </svg>
 </a>
 {/* Location */}
@@ -93,7 +93,7 @@ export default function App() {
   <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
     <path d="M12 22s7-5.6 7-12a7 7 0 1 0-14 0c0 6.4 7 12 7 12z"
       stroke="#c9835d" strokeWidth="2"/>
-    <circle cx="12" cy="10" r="3" fill="#c9835d"/>
+    <circle cx="12" cy="10" r="3" fill="#72A294"/>
   </svg>
 </a>
 

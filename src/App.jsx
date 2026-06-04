@@ -38,19 +38,19 @@ export default function App() {
       url: "https://docs.google.com/forms/d/1F6SvLTzFnni_MemrOVdHHOKXYRxCla3Iysa09dpB99M/viewform?edit_requested=true",
     },
     {
-      title: "تطبيق طابور",
-      subtitle: "لعروضنا وتجهيز طلباتكم",
-      icon: "/icons/appw.png",
-      size:30,
-      url: "https://tabur.tryorder.net/app",
-    },{
   title: "توقع المباريات",
   subtitle: "شارك بتوقعك واربح جوائز طابور الحصرية",
   icon: "/icons/football.png",
   size: 30,
   url: "/predict",
   featured: true,
-},
+},{
+      title: "تطبيق طابور",
+      subtitle: "لعروضنا وتجهيز طلباتكم",
+      icon: "/icons/appw.png",
+      size:30,
+      url: "https://tabur.tryorder.net/app",
+    },
     {
       title: "من نحن",
       subtitle: "تعرّف على طابور",

@@ -21,7 +21,12 @@ body,
   min-height: 100%;
   direction: rtl;
   font-family: "Cairo", sans-serif;  
-  background-image: url('/icons/IMG_7265 (1).PNG');
+    background:
+    linear-gradient(
+      rgba(255,255,255,0.75),
+      rgba(255,255,255,0.75)
+    ),
+    url('/icons/IMG_7265 (1).PNG');
   background-size: 420px auto;
   background-position: top center;
   background-repeat: repeat;

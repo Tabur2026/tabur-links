@@ -41,7 +41,7 @@ export default function App() {
   title: "توقع المباريات",
   subtitle: "شارك بتوقعك واربح جوائز طابور الحصرية",
   icon: "/icons/football.png",
-  size: 30,
+  size: 50,
   url: "/predict",
   featured: true,
 },{

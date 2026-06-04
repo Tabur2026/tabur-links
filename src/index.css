@@ -115,7 +115,7 @@ a {
   box-sizing: border-box;
   background: rgba(255,255,255,0.95);
   backdrop-filter: blur(8px);
-  border: 9px solid #E8ECEB;
+  border: 1px solid #E8ECEB;
   box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 }
 

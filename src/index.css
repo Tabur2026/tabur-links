@@ -237,14 +237,8 @@ a {
   border: none;
 }
 
-.featured-card .card-icon img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-}
-
 .featured-card .arrow {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 255);
 }
 
 

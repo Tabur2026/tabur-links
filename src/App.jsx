@@ -41,7 +41,7 @@ export default function App() {
       title: "تطبيق طابور",
       subtitle: "لعروضنا وتجهيز طلباتكم",
       icon: "/icons/mobile_icon_white.png",
-      size: 25,
+      size: 50,
       url: "https://tabur.tryorder.net/app",
     },
     {

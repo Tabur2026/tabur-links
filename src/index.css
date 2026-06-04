@@ -233,8 +233,8 @@ a {
 }
 
 .featured-card .card-icon {
-  background: rgba(255, 255, 255, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: #ffffff;
+  border: none;
 }
 
 .featured-card .card-icon img {

@@ -65,8 +65,6 @@ export default function App() {
       <div className="container">
         <header className="header">  
                <img src="/logo.png" alt="طابور" width="160px" height="125px" />
-
-          <h1 className="brand">طــابـور</h1>
           <h6 className="subbrand">كافتيـــريا  لكل الأوقــات </h6>
           <p className="country">المملكة العربية السعودية</p>
 

@@ -127,17 +127,13 @@ a {
 .card-icon {
   width: 58px;
   height: 58px;
-border: 1px solid #DCEBE7;
+  border: 1px solid #DCEBE7;
   background: #6E9C92;
-color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.card-icon img{
-  object-fit:contain;
-  filter: invert(38%) sepia(32%) saturate(540%) hue-rotate(120deg) brightness(85%);
-}
+
 .card-icon svg {
   width: 28px;
   height: 28px;

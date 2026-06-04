@@ -107,21 +107,33 @@ export default function App() {
 </div>
         </header>
 
-        <section className="cards" className={`card ${item.featured ? "featured-card" : ""}`}>
-          {links.map((item, index) => (
-            <a key={index} href={item.url} className="card">
-              <div className="card-icon"><img src={item.icon} style={{width: item.size}} alt={item.title} /></div>
-              <div className="card-content">
-                <h3 className="card-title">{item.title}</h3>
-                {item.subtitle ? (
-                  <p className="card-subtitle">{item.subtitle}</p>
-                ) : null}
-              </div>
+ <section className="cards">
+  {links.map((item, index) => (
+    <a
+      key={index}
+      href={item.url}
+      className={`card ${item.featured ? "featured-card" : ""}`}
+    >
+      <div className="card-icon">
+        <img
+          src={item.icon}
+          style={{ width: item.size }}
+          alt={item.title}
+        />
+      </div>
 
-              <div className="card-arrow">›</div>
-            </a>
-          ))}
-        </section>
+      <div className="card-content">
+        <h3 className="card-title">{item.title}</h3>
+
+        {item.subtitle ? (
+          <p className="card-subtitle">{item.subtitle}</p>
+        ) : null}
+      </div>
+
+      <div className="card-arrow">›</div>
+    </a>
+  ))}
+</section>
 
         <section className="branches-section">
           <h2 className="branches-title">فـــروعــنــا</h2>

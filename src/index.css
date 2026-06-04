@@ -175,7 +175,7 @@ a {
   text-align: center;
   font-size: 26px;
   margin: 0 0 18px;
-  color: var(--cardtext);
+  color: var(--text);
   font-weight: 800;
 }
 
@@ -193,7 +193,7 @@ a {
   align-items: center;
   justify-content: space-between;
   background: var(--card);
-  color: inherit;
+  color: var(--cardtext);
   border: 1px solid var(--border);
   border-radius: 17px;
   box-shadow: var(--shadow);

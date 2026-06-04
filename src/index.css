@@ -23,8 +23,8 @@ body,
   font-family: "Cairo", sans-serif;  
     background:
     linear-gradient(
-      rgba(255,255,255,0.75),
-      rgba(255,255,255,0.75)
+      rgba(255,255,255,0.85),
+      rgba(255,255,255,0.85)
     ),
     url('/icons/IMG_7265 (1).PNG');
   background-size: 420px auto;

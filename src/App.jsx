@@ -43,7 +43,14 @@ export default function App() {
       icon: "/icons/appw.png",
       size:30,
       url: "https://tabur.tryorder.net/app",
-    },
+    },{
+  title: "توقع المباريات",
+  subtitle: "شارك بتوقعك واربح جوائز طابور الحصرية",
+  icon: "/icons/football.png",
+  size: 30,
+  url: "/predict",
+  featured: true,
+},
     {
       title: "من نحن",
       subtitle: "تعرّف على طابور",

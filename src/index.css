@@ -19,7 +19,8 @@ body,
   margin: 0;
   min-height: 100%;
   direction: rtl;
-  font-family: "Cairo", sans-serif;
+  font-family: "Cairo", sans-serif;  
+  background-image: url('/icons/IMG_7265 (1).PNG');
 }
 
 body {
@@ -32,9 +33,7 @@ a {
 }
 
 .page {
-  min-height: 100vh;
-  background-image: url('/icons/IMG_7265 (1).PNG');
-   
+  min-height: 100vh; 
   padding: 18px 16px 50px;
 }
 

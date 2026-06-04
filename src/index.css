@@ -34,7 +34,10 @@ a {
 
 .page {
   min-height: 100vh;
-  background: var(--bg);
+  background-image: url('/background.PNG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 18px 16px 50px;
 }
 

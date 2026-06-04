@@ -64,7 +64,7 @@ export default function App() {
     <div className="page">
       <div className="container">
         <header className="header">  
-               <img src="/icons/profile_tabur2022.png" alt="طابور"  />
+               <img src="/icons/profile_tabur2022.png" alt="طابور" width="200px" height="200px" />
           <h6 className="subbrand">كافتيـــريا  لكل الأوقــات </h6>
           <p className="country">المملكة العربية السعودية</p>
 

@@ -21,6 +21,9 @@ body,
   direction: rtl;
   font-family: "Cairo", sans-serif;  
   background-image: url('/icons/IMG_7265 (1).PNG');
+  background-size: 420px auto;
+  background-position: top center;
+  background-repeat: repeat;
 }
 
 body {

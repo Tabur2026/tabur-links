@@ -54,7 +54,7 @@ export default function App() {
     {
       title: "انضم إلينا",
       subtitle: "",
-      icon: "/icons/join.png",
+      icon: "/icons/join_white.png",
       size: 50,
       url: "https://docs.google.com/forms/d/e/1FAIpQLSeRy2lW0DnijNKvWTZYBMgewHvV9zoWcPovAXTfeRFkZx2N4w/viewform",
     },

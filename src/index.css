@@ -237,8 +237,8 @@ a {
   border: none;
 }
 
-.featured-card .arrow {
-  color:#ffffff;
+.featured-card .card-arrow {
+  color: #ffffff !important;
 }
 
 

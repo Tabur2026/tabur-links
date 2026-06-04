@@ -107,7 +107,7 @@ export default function App() {
 </div>
         </header>
 
-        <section className="cards">
+        <section className="cards" className={`card ${item.featured ? "featured-card" : ""}`}>
           {links.map((item, index) => (
             <a key={index} href={item.url} className="card">
               <div className="card-icon"><img src={item.icon} style={{width: item.size}} alt={item.title} /></div>

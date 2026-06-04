@@ -33,7 +33,7 @@ export default function App() {
     {
       title: "استمارة طلب فرنشايز طابور",
       subtitle: "",
-      icon: "/icons/doc.png",
+      icon: "/icons/franchiseReq.png",
       size:25,
       url: "https://docs.google.com/forms/d/1F6SvLTzFnni_MemrOVdHHOKXYRxCla3Iysa09dpB99M/viewform?edit_requested=true",
     },

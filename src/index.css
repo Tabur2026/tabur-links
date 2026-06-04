@@ -127,8 +127,9 @@ a {
 .card-icon {
   width: 58px;
   height: 58px;
- background: #EDF7F5;
 border: 1px solid #DCEBE7;
+  background: #6E9C92;
+color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;

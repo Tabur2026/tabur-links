@@ -7,7 +7,7 @@
   --card: #72A294;
   --text: #72A294;
   --subtext: #9a8a7d;
-  --card-text: #ffffff;
+  --cardtext: #ffffff;
   --accent: #c9835d;
   --soft: #eee6df;
   --border: #e8ddd4;
@@ -175,7 +175,7 @@ a {
   text-align: center;
   font-size: 26px;
   margin: 0 0 18px;
-  color: var(--card-text);
+  color: var(--cardtext);
   font-weight: 800;
 }
 

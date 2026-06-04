@@ -82,9 +82,9 @@ export default function App() {
 <a href="#" className="social-link">
   <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
     <rect x="3" y="3" width="18" height="18" rx="5"
-      stroke="#c9835d" strokeWidth="2"/>
+      stroke="#72A294" strokeWidth="2"/>
     <circle cx="12" cy="12" r="4"
-      stroke="#c9835d" strokeWidth="2"/>
+      stroke="#72A294" strokeWidth="2"/>
     <circle cx="17" cy="7" r="1.5" fill="#72A294"/>
   </svg>
 </a>
@@ -92,7 +92,7 @@ export default function App() {
 <a href="#" className="social-link">
   <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
     <path d="M12 22s7-5.6 7-12a7 7 0 1 0-14 0c0 6.4 7 12 7 12z"
-      stroke="#c9835d" strokeWidth="2"/>
+      stroke="#72A294" strokeWidth="2"/>
     <circle cx="12" cy="10" r="3" fill="#72A294"/>
   </svg>
 </a>

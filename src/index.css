@@ -216,6 +216,40 @@ a {
   color: #c8b6a8;
   font-size: 24px;
 }
+.featured-card {
+  background: linear-gradient(135deg, #E6B85C, #D9A441);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 12px 28px rgba(217, 164, 65, 0.28);
+}
+
+.featured-card .card-title {
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.featured-card .card-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.featured-card .card-icon {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.featured-card .card-icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.featured-card .arrow {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+
+
+
  @media (max-width: 640px) {
 
   .brand {

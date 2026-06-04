@@ -20,7 +20,10 @@ body,
   min-height: 100%;
   direction: rtl;
   font-family: "Cairo", sans-serif;
-  background: var(--bg);
+    background-image: url('/icons/background.PNG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 body {
@@ -34,10 +37,6 @@ a {
 
 .page {
   min-height: 100vh;
-  background-image: url('/icons/background.PNG');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   padding: 18px 16px 50px;
 }
 

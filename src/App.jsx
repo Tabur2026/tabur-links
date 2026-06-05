@@ -1,6 +1,7 @@
 import "./App.css";
-import Predict from "./pages/Predict";
 import { useEffect, useState } from "react";
+import Predict from "./pages/Predict";
+
 
 export default function App() {
   const [branches, setBranches] = useState([]);

@@ -1,6 +1,7 @@
 import "./App.css";
 import { useEffect, useState } from "react";
-import Predict from "./pages/Predict";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Predict from "./Predict";
 
 
 export default function App() {
@@ -68,8 +69,7 @@ export default function App() {
       url: "https://docs.google.com/forms/d/e/1FAIpQLSeRy2lW0DnijNKvWTZYBMgewHvV9zoWcPovAXTfeRFkZx2N4w/viewform",
     },
   ];
- 
-  return (
+ const Home = () => (
     <div className="page">
       <div className="container">
         <header className="header">  
@@ -161,4 +161,12 @@ export default function App() {
       </div>
     </div>
   );
+  return (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/predict" element={<Predict />} />
+    </Routes>
+  </BrowserRouter>
+);
 }

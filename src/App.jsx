@@ -38,7 +38,7 @@ export default function App() {
       url: "https://docs.google.com/forms/d/1F6SvLTzFnni_MemrOVdHHOKXYRxCla3Iysa09dpB99M/viewform?edit_requested=true",
     },
     {
-  title: "توقع نتيجة المباريات",
+  title: "توقع النتيجة ",
   subtitle: "شارك بتوقعك واربح جوائز طابور الحصرية",
   icon: "/icons/football.png",
   size: 50,

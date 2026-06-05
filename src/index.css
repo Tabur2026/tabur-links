@@ -501,7 +501,7 @@ a {
   .predict-container {
     width: 100%;
     max-width: 100%;
-    padding: 0 16px;
+    padding: 0 10px;
   }
 
   .predict-card {
@@ -520,11 +520,20 @@ a {
     min-width: 0;
   }
 
-  .team-flag img {
-    width: 86px;
-    height: 58px;
-    object-fit: cover;
-  }
+  .team-flag {
+  width: 50px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.team-flag img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
   .team p {
     font-size: 20px;

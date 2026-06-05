@@ -1,4 +1,5 @@
 import "./App.css";
+import Predict from "./pages/Predict";
 import { useEffect, useState } from "react";
 
 export default function App() {

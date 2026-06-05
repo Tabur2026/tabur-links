@@ -489,12 +489,92 @@ a {
 }
 
 
-@media (max-width:640px){
-  .team-flag{
-    font-size:54px;
+ @media (max-width: 640px) {
+  .predict-page {
+    padding: 8px 10px 60px;
+  }
+
+  .predict-container {
+    max-width: 100%;
+  }
+
+  .predict-card {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 22px 14px;
+    margin-bottom: 16px;
+    border-radius: 22px;
+  }
+
+  .predict-card h2 {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+
+  .match-box {
+    grid-template-columns: 1fr 70px 1fr;
+    gap: 8px;
+  }
+
+  .team-flag {
+    width: 72px;
+    height: 48px;
+  }
+
+  .team p {
+    margin-top: 12px;
+    font-size: 15px;
+    line-height: 1.35;
+  }
+
+  .vs strong {
+    font-size: 34px;
+  }
+
+  .vs span {
+    font-size: 12px;
+  }
+
+  .score-labels {
+    font-size: 14px;
+    gap: 8px;
+  }
+
+  .score-row {
+    gap: 14px;
+  }
+
+  .score-control {
+    gap: 6px;
+  }
+
+  .score-control button {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .score-box {
+    width: 54px;
+    height: 54px;
+    font-size: 24px;
+  }
+
+  .score-dash {
+    font-size: 24px;
+  }
+
+  .predict-card input {
+    height: 50px;
+    font-size: 14px;
+  }
+
+  .submit-predict {
+    height: 56px;
+    font-size: 17px;
   }
 }
-
 /* Mobile */
 
 }

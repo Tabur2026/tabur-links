@@ -87,7 +87,6 @@ export default function Predict() {
 
       await fetch(SCRIPT_URL, {
         method: "POST",
-        mode: "no-cors",
         body: JSON.stringify({
           name: name.trim(),
           phone: phone.trim(),

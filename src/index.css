@@ -497,78 +497,86 @@ a {
 
 /* Mobile */
 
-@media (max-width: 640px) {
-  .predict-page {
-    padding: 28px 16px 60px;
-  }
-
-  .predict-header {
-    grid-template-columns: 52px 1fr 52px;
-  }
-
-  .predict-header h1 {
-    font-size: 24px;
-  }
-
-  .predict-header img {
-    width: 48px;
-    height: 48px;
+ @media (max-width: 600px) {
+  .predict-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 16px;
   }
 
   .predict-card {
-    padding: 22px 16px;
-    border-radius: 22px;
+    width: 100%;
+    padding: 28px 18px;
+    border-radius: 24px;
   }
 
   .match-box {
-    grid-template-columns: 1fr 78px 1fr;
-    gap: 8px;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 10px;
+    align-items: center;
   }
 
-  .team-img {
-    width: 64px;
-    height: 64px;
+  .team {
+    min-width: 0;
+  }
+
+  .team-flag img {
+    width: 86px;
+    height: 58px;
+    object-fit: cover;
   }
 
   .team p {
-    font-size: 18px;
+    font-size: 20px;
+    line-height: 1.4;
+    word-break: normal;
   }
 
   .vs strong {
-    font-size: 26px;
+    font-size: 38px;
   }
 
   .vs span {
-    font-size: 12px;
+    font-size: 14px;
+  }
+
+  .score-labels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    font-size: 16px;
+    text-align: center;
   }
 
   .score-row {
-    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 8px;
+    align-items: center;
   }
 
   .score-control {
-    gap: 6px;
+    gap: 8px;
   }
 
   .score-control button {
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
     font-size: 20px;
   }
 
   .score-box {
-    width: 62px;
-    height: 62px;
+    width: 64px;
+    height: 64px;
     font-size: 32px;
-    border-radius: 14px;
   }
 
   .score-dash {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   .submit-predict {
-    height: 56px;
-    font-size: 19px;
+    width: calc(100% - 32px);
+    margin: 20px auto;
   }
 }

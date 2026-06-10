@@ -116,35 +116,32 @@ export default function Predict() {
       };
     });
   };
-
   const handleSubmit = async () => {
   if (!name.trim()) {
-    setMessage("يرجى إدخال الاسم الكامل");
+    setPopup({ show: true, type: "error", text: "يرجى إدخال الاسم الكامل" });
     return;
   }
 
   if (!phone.trim()) {
-    setMessage("يرجى إدخال رقم الجوال");
+    setPopup({ show: true, type: "error", text: "يرجى إدخال رقم الجوال" });
     return;
   }
 
   if (!isRegistered) {
-    setMessage("يرجى اختيار هل أنت مسجل في طابور");
+    setPopup({ show: true, type: "error", text: "يرجى اختيار هل أنت مسجل في طابور" });
     return;
   }
 
   if (!winnerTeam) {
-    setMessage("يرجى اختيار الفريق الفائز المتوقع");
+    setPopup({ show: true, type: "error", text: "يرجى اختيار الفريق الفائز المتوقع" });
     return;
   }
 
   setIsSending(true);
-  setMessage("");
 
   try {
-    await fetch(SCRIPT_URL, {
+    const res = await fetch(SCRIPT_URL, {
       method: "POST",
-      mode: "no-cors",
       body: JSON.stringify({
         name: name.trim(),
         phone: phone.trim(),
@@ -153,13 +150,37 @@ export default function Predict() {
       }),
     });
 
-    setMessage("تم تسجيل توقعك بنجاح");
+    const result = await res.text();
+
+    if (result === "DUPLICATE") {
+      setPopup({
+        show: true,
+        type: "warning",
+        text: "تم تسجيل توقعك مسبقًا، شكرًا لمشاركتك.",
+      });
+    } else {
+      setPopup({
+        show: true,
+        type: "success",
+        text: "تم تسجيل توقعك بنجاح",
+      });
+
+      setName("");
+      setPhone("");
+      setIsRegistered("");
+      setWinnerTeam("");
+    }
   } catch (error) {
-    setMessage("حدث خطأ أثناء الإرسال، يرجى المحاولة مرة أخرى");
+    setPopup({
+      show: true,
+      type: "error",
+      text: "حدث خطأ أثناء الإرسال، يرجى المحاولة مرة أخرى",
+    });
   }
 
   setIsSending(false);
 };
+  
   return (
     <div className="predict-page" dir="rtl">
       <div className="predict-container">

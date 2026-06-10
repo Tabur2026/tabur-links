@@ -401,7 +401,21 @@ export default function Predict() {
           {isSending ? "جاري الإرسال..." : "🏆 إرسال التوقع"}
         </button>
 
-        {message && <p className="predict-message">{message}</p>}
+        {popup.show && (
+  <div className="popup-overlay">
+    <div className={`popup-box ${popup.type}`}>
+      <div className="popup-icon">🏆</div>
+      <p>{popup.text}</p>
+
+      <button
+        type="button"
+        onClick={() => setPopup({ show: false, type: "", text: "" })}
+      >
+        حسناً
+      </button>
+    </div>
+  </div>
+)}
       </div>
     </div>
   );

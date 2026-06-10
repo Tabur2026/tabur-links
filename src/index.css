@@ -673,14 +673,14 @@ a {
   .predict-card input,
   .winner-select {
     height: 58px;
-    font-size: 9px;
+    font-size: 12px;
     border-radius: 17px;
     margin-top: 12px;
   }
 
   .field-title {
     text-align: center;
-    font-size: 13px;
+    font-size: 16px;
     margin: 26px 0 20px;
   }
 
@@ -689,11 +689,11 @@ a {
     gap: 28px;
     margin-bottom: 30px;
   }
-
-  .radio-row label {
-    font-size: 10px;
-    gap: 10px;
-  }
+  
+.radio-row label {
+  font-size: 12px;
+  gap: 8px;
+}
 
   .radio-row input[type="radio"] {
     width: 16px;
@@ -725,8 +725,5 @@ a {
   margin-bottom: 28px;
 }
 
-.radio-row label {
-  font-size: 22px;
-  gap: 8px;
-}
+
 }

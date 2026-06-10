@@ -5,7 +5,7 @@ const SHEET_URL =
 
 const SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbyQPMTcGFA0NUVZZ4wfqbrqY1s8OrtxroqR8CMpGHjNL8_l30dGIRC5U9DFMEzE2C7W/exec";
- ```javascript
+
 const teamsList = [
   "السعودية",
   "قطر",

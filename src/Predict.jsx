@@ -116,7 +116,7 @@ export default function Predict() {
       };
     });
   };
-  const handleSubmit = async () => {
+ const handleSubmit = async () => {
   if (!name.trim()) {
     setPopup({ show: true, type: "error", text: "يرجى إدخال الاسم الكامل" });
     return;
@@ -140,8 +140,9 @@ export default function Predict() {
   setIsSending(true);
 
   try {
-    const res = await fetch(SCRIPT_URL, {
+    await fetch(SCRIPT_URL, {
       method: "POST",
+      mode: "no-cors",
       body: JSON.stringify({
         name: name.trim(),
         phone: phone.trim(),
@@ -150,26 +151,16 @@ export default function Predict() {
       }),
     });
 
-    const result = await res.text();
+    setPopup({
+      show: true,
+      type: "success",
+      text: "تم استلام توقعك بنجاح، وإذا كان الرقم مسجلًا مسبقًا لن يتم تكرار التسجيل.",
+    });
 
-    if (result === "DUPLICATE") {
-      setPopup({
-        show: true,
-        type: "warning",
-        text: "تم تسجيل توقعك مسبقًا، شكرًا لمشاركتك.",
-      });
-    } else {
-      setPopup({
-        show: true,
-        type: "success",
-        text: "تم تسجيل توقعك بنجاح",
-      });
-
-      setName("");
-      setPhone("");
-      setIsRegistered("");
-      setWinnerTeam("");
-    }
+    setName("");
+    setPhone("");
+    setIsRegistered("");
+    setWinnerTeam("");
   } catch (error) {
     setPopup({
       show: true,

@@ -66,6 +66,11 @@ export default function Predict() {
   const [winnerTeam, setWinnerTeam] = useState("");
   const [message, setMessage] = useState("");
   const [isSending, setIsSending] = useState(false);
+  const [popup, setPopup] = useState({
+  show: false,
+  type: "",
+  text: "",
+});
 
   useEffect(() => {
     fetch(SHEET_URL)

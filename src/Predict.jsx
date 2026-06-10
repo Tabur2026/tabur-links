@@ -370,18 +370,7 @@ export default function Predict() {
             </div>
           </div>
 
-          <select
-            className="winner-select"
-            value={winnerTeam}
-            onChange={(e) => setWinnerTeam(e.target.value)}
-          >
-            <option value="">توقعك للفريق الفائز بكأس العالم 🏆 </option>
-            {teamsList.map((team) => (
-              <option key={team} value={team}>
-                {team}
-              </option>
-            ))}
-          </select>
+        <select className="winner-select" value={winnerTeam} onChange={(e) => setWinnerTeam(e.target.value)} > <option value="">توقعك للفريق الفائز بكأس العالم 🏆 </option> {teamsList.map((team) => ( <option key={team} value={team}> {team} </option> ))} </select>
         </section>
 
         <button

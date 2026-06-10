@@ -113,68 +113,48 @@ export default function Predict() {
   };
 
   const handleSubmit = async () => {
-    if (!name.trim()) {
-      setMessage("يرجى إدخال الاسم الكامل");
-      return;
-    }
+  if (!name.trim()) {
+    setMessage("يرجى إدخال الاسم الكامل");
+    return;
+  }
 
-    if (!phone.trim()) {
-      setMessage("يرجى إدخال رقم الجوال");
-      return;
-    }
+  if (!phone.trim()) {
+    setMessage("يرجى إدخال رقم الجوال");
+    return;
+  }
 
-    if (!isRegistered) {
-      setMessage("يرجى اختيار هل أنت مسجل في طابور");
-      return;
-    }
+  if (!isRegistered) {
+    setMessage("يرجى اختيار هل أنت مسجل في طابور");
+    return;
+  }
 
-    if (!winnerTeam) {
-      setMessage("يرجى اختيار الفريق الفائز المتوقع");
-      return;
-    }
+  if (!winnerTeam) {
+    setMessage("يرجى اختيار الفريق الفائز المتوقع");
+    return;
+  }
 
-    if (matches.length === 0) {
-      setMessage("لا توجد مباريات متاحة اليوم");
-      return;
-    }
+  setIsSending(true);
+  setMessage("");
 
-    setIsSending(true);
-    setMessage("");
+  try {
+    await fetch(SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",
+      body: JSON.stringify({
+        name: name.trim(),
+        phone: phone.trim(),
+        isRegistered,
+        winnerTeam,
+      }),
+    });
 
-    try {
-      for (const match of matches) {
-        const matchId = getMatchId(match);
-        const matchScore = scores[matchId] || { score1: 0, score2: 0 };
+    setMessage("تم تسجيل توقعك بنجاح");
+  } catch (error) {
+    setMessage("حدث خطأ أثناء الإرسال، يرجى المحاولة مرة أخرى");
+  }
 
-        await fetch(SCRIPT_URL, {
-          method: "POST",
-          mode: "no-cors",
-          body: JSON.stringify({
-            name: name.trim(),
-            phone: phone.trim(),
-            isRegistered,
-            winnerTeam,
-            matchId,
-            matchDate: match.date,
-            matchTime: match.time,
-            team1: match.team1,
-            score1: matchScore.score1,
-            team2: match.team2,
-            score2: matchScore.score2,
-          }),
-        });
-      }
-
-      setMessage(
-        "تم تسجيل توقعك بنجاح وفي حال كان الرقم مسجلًا مسبقًا لن يتم تكرار التوقع"
-      );
-    } catch (error) {
-      setMessage("حدث خطأ أثناء الإرسال، يرجى المحاولة مرة أخرى");
-    }
-
-    setIsSending(false);
-  };
-
+  setIsSending(false);
+};
   return (
     <div className="predict-page" dir="rtl">
       <div className="predict-container">

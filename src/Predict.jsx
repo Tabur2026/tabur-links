@@ -374,7 +374,7 @@ export default function Predict() {
             value={winnerTeam}
             onChange={(e) => setWinnerTeam(e.target.value)}
           >
-            <option value="">توقعك للفريق الفائز</option>
+            <option value="">توقعك للفريق الفائز بكأس العالم 🏆 </option>
             {teamsList.map((team) => (
               <option key={team} value={team}>
                 {team}

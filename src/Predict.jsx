@@ -342,7 +342,7 @@ export default function Predict() {
           />
 
           <div className="registered-box">
-            <p className="field-title">هل أنت مسجل في طابور؟</p>
+            <p className="field-title">هل أنت مسجل في تطبيق طابور؟</p>
 
             <div className="radio-row">
               <label>

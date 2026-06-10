@@ -673,14 +673,14 @@ a {
   .predict-card input,
   .winner-select {
     height: 58px;
-    font-size: 12px;
+    font-size: 9px;
     border-radius: 17px;
     margin-top: 12px;
   }
 
   .field-title {
     text-align: center;
-    font-size: 14px;
+    font-size: 13px;
     margin: 26px 0 20px;
   }
 

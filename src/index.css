@@ -718,4 +718,14 @@ a {
     font-size: 27px;
     border-radius: 22px;
   }
+  .radio-row {
+  justify-content: center;
+  gap: 42px;
+  margin-bottom: 28px;
+}
+
+.radio-row label {
+  font-size: 22px;
+  gap: 8px;
+}
 }

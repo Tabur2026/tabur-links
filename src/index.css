@@ -691,13 +691,13 @@ a {
   }
 
   .radio-row label {
-    font-size: 12px;
+    font-size: 10px;
     gap: 10px;
   }
 
   .radio-row input[type="radio"] {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     border: 2px solid #8f8f8f;
   }
 

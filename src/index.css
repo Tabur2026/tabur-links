@@ -531,7 +531,7 @@ a {
   }
 
   .country {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .card {
@@ -715,7 +715,7 @@ a {
     height: 72px;
     margin: 18px auto;
     display: block;
-    font-size: 27px;
+    font-size: 20px;
     border-radius: 22px;
   }
   .radio-row {

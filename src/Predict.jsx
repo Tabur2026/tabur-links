@@ -6,11 +6,64 @@ const SHEET_URL =
 const SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbyQPMTcGFA0NUVZZ4wfqbrqY1s8OrtxroqR8CMpGHjNL8_l30dGIRC5U9DFMEzE2C7W/exec";
 
+const teamsList = [
+  "المكسيك",
+  "كوريا الجنوبية",
+  "كندا",
+  "أمريكا",
+  "قطر",
+  "المغرب",
+  "هايتي",
+  "أستراليا",
+  "ألمانيا",
+  "هولندا",
+  "ساحل العاج",
+  "السويد",
+  "إسبانيا",
+  "بلجيكا",
+  "السعودية",
+  "إيران",
+  "فرنسا",
+  "العراق",
+  "الأرجنتين",
+  "النمسا",
+  "البرتغال",
+  "إنجلترا",
+  "بنما",
+  "كولومبيا",
+  "تشيكيا",
+  "سويسرا",
+  "اسكتلندا",
+  "البرازيل",
+  "تركيا",
+  "الإكوادور",
+  "تونس",
+  "الرأس الأخضر",
+  "نيوزيلندا",
+  "النرويج",
+  "الأردن",
+  "البوسنة",
+  "جنوب أفريقيا",
+  "كوراساو",
+  "اليابان",
+  "الباراغواي",
+  "السنغال",
+  "الأوروغواي",
+  "مصر",
+  "كرواتيا",
+  "جمهورية الكونغو",
+  "الجزائر",
+  "غانا",
+  "أوزبكستان",
+];
+
 export default function Predict() {
   const [matches, setMatches] = useState([]);
   const [scores, setScores] = useState({});
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [isRegistered, setIsRegistered] = useState("");
+  const [winnerTeam, setWinnerTeam] = useState("");
   const [message, setMessage] = useState("");
   const [isSending, setIsSending] = useState(false);
 
@@ -34,7 +87,6 @@ export default function Predict() {
         });
 
         const today = new Date().toLocaleDateString("en-US");
-
         const todayOnly = parsed.filter((match) => match.date === today);
 
         setMatches(todayOnly);
@@ -48,7 +100,6 @@ export default function Predict() {
   const changeScore = (matchId, team, amount) => {
     setScores((prev) => {
       const current = prev[matchId] || { score1: 0, score2: 0 };
-
       const newScore = Math.max(current[team] + amount, 0);
 
       return {
@@ -61,57 +112,71 @@ export default function Predict() {
     });
   };
 
-   const handleSubmit = async () => {
-  if (!name.trim()) {
-    setMessage("يرجى إدخال الاسم الكامل");
-    return;
-  }
-
-  if (!phone.trim()) {
-    setMessage("يرجى إدخال رقم الجوال");
-    return;
-  }
-
-  if (matches.length === 0) {
-    setMessage("لا توجد مباريات متاحة اليوم");
-    return;
-  }
-
-  setIsSending(true);
-  setMessage("");
-
-  try {
-    for (const match of matches) {
-      const matchId = getMatchId(match);
-      const matchScore = scores[matchId] || { score1: 0, score2: 0 };
-
-      await fetch(SCRIPT_URL, {
-        method: "POST",
-        mode: "no-cors",
-        body: JSON.stringify({
-          name: name.trim(),
-          phone: phone.trim(),
-          matchId,
-          matchDate: match.date,
-          matchTime: match.time,
-          team1: match.team1,
-          score1: matchScore.score1,
-          team2: match.team2,
-          score2: matchScore.score2,
-        }),
-      });
+  const handleSubmit = async () => {
+    if (!name.trim()) {
+      setMessage("يرجى إدخال الاسم الكامل");
+      return;
     }
 
-    setMessage("تم تسجيل توقعك بنجاح وفي حال كان الرقم مسجلًا مسبقًا لن يتم تكرار التوقع");
-  } catch (error) {
-    setMessage("حدث خطأ أثناء الإرسال، يرجى المحاولة مرة أخرى");
-  }
+    if (!phone.trim()) {
+      setMessage("يرجى إدخال رقم الجوال");
+      return;
+    }
 
-  setIsSending(false);
-};
+    if (!isRegistered) {
+      setMessage("يرجى اختيار هل أنت مسجل في طابور");
+      return;
+    }
+
+    if (!winnerTeam) {
+      setMessage("يرجى اختيار الفريق الفائز المتوقع");
+      return;
+    }
+
+    if (matches.length === 0) {
+      setMessage("لا توجد مباريات متاحة اليوم");
+      return;
+    }
+
+    setIsSending(true);
+    setMessage("");
+
+    try {
+      for (const match of matches) {
+        const matchId = getMatchId(match);
+        const matchScore = scores[matchId] || { score1: 0, score2: 0 };
+
+        await fetch(SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          body: JSON.stringify({
+            name: name.trim(),
+            phone: phone.trim(),
+            isRegistered,
+            winnerTeam,
+            matchId,
+            matchDate: match.date,
+            matchTime: match.time,
+            team1: match.team1,
+            score1: matchScore.score1,
+            team2: match.team2,
+            score2: matchScore.score2,
+          }),
+        });
+      }
+
+      setMessage(
+        "تم تسجيل توقعك بنجاح وفي حال كان الرقم مسجلًا مسبقًا لن يتم تكرار التوقع"
+      );
+    } catch (error) {
+      setMessage("حدث خطأ أثناء الإرسال، يرجى المحاولة مرة أخرى");
+    }
+
+    setIsSending(false);
+  };
 
   return (
-    <div className="predict-page">
+    <div className="predict-page" dir="rtl">
       <div className="predict-container">
         <header className="header">
           <img
@@ -278,6 +343,47 @@ export default function Predict() {
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
           />
+
+          <div className="registered-box">
+            <p className="field-title">هل أنت مسجل في طابور؟</p>
+
+            <div className="radio-row">
+              <label>
+                <input
+                  type="radio"
+                  name="isRegistered"
+                  value="نعم"
+                  checked={isRegistered === "نعم"}
+                  onChange={(e) => setIsRegistered(e.target.value)}
+                />
+                <span>نعم</span>
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  name="isRegistered"
+                  value="لا"
+                  checked={isRegistered === "لا"}
+                  onChange={(e) => setIsRegistered(e.target.value)}
+                />
+                <span>لا</span>
+              </label>
+            </div>
+          </div>
+
+          <select
+            className="winner-select"
+            value={winnerTeam}
+            onChange={(e) => setWinnerTeam(e.target.value)}
+          >
+            <option value="">توقعك للفريق الفائز</option>
+            {teamsList.map((team) => (
+              <option key={team} value={team}>
+                {team}
+              </option>
+            ))}
+          </select>
         </section>
 
         <button

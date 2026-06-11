@@ -98,7 +98,7 @@ export default function App() {
   </svg>
 </a>
 {/* Location */}
-<a href="#" className="social-link">
+<a   href="https://www.tiktok.com/@tabur.sa" className="social-link">
   <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
     <path d="M12 22s7-5.6 7-12a7 7 0 1 0-14 0c0 6.4 7 12 7 12z"
       stroke="#72A294" strokeWidth="2"/>

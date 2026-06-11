@@ -81,14 +81,14 @@ export default function App() {
 
 
 {/* TikTok */}
-<a href="#" className="social-link">
+<a  href="https://www.tiktok.com/@tabur.sa" className="social-link">
   <svg viewBox="0 0 24 24" width="22" height="22" fill="#72A294">
     <path d="M19 8.3a6.5 6.5 0 0 1-3.8-1.2V14a5 5 0 1 1-5-5h.3v2.7h-.3a2.3 2.3 0 1 0 2.3 2.3V2h2.7a3.8 3.8 0 0 0 3.8 3.8v2.5z"/>
   </svg>
 </a>
 
 {/* Instagram */}
-<a href="#" className="social-link">
+<a href="https://www.instagram.com/tabur.sa" className="social-link">
   <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
     <rect x="3" y="3" width="18" height="18" rx="5"
       stroke="#72A294" strokeWidth="2"/>
@@ -98,7 +98,7 @@ export default function App() {
   </svg>
 </a>
 {/* Location */}
-<a   href="https://www.tiktok.com/@tabur.sa" className="social-link">
+<a   href="#" className="social-link">
   <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
     <path d="M12 22s7-5.6 7-12a7 7 0 1 0-14 0c0 6.4 7 12 7 12z"
       stroke="#72A294" strokeWidth="2"/>
